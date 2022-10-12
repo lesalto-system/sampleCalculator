@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JavaScript講座 電卓</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="./css/calc.css" media="all" />
+  <script src="./js/calc.js"></script>
+  <body>
+    <form name="myForm">
+    <div class="base">
+        <div id="result">
+            <input id="input_result" type="text" name="result" value="">
+        </div>
+        <div id="line">
+            <a class="head_btn" href="#" onclick="doClear()">AC</a>
+            <a class="head_btn" href="#" id="non_head_btn"></a>
+            <a class="head_btn" href="#" id="non_head_btn"></a>
+            <a class="calc_btn" href="#" onclick="doCalculate('/')">÷</a>
+        </div>
+
+        <!-- 7 8 9 /-->
+        <div id="line">
+            <a href="#" class="line_btn" onclick="doValue(7)">7</a>
+            <a href="#" class="line_btn" onclick="doValue(8)">8</a>
+            <a href="#" class="line_btn" onclick="doValue(9)">9</a>
+            <a href="#" class="calc_btn" onclick="doCalculate('*')">×</a>
+        </div>
+
+        <!-- 4 5 6 * -->
+        <div id="line">
+            <a href="#" class="line_btn" onclick="doValue(4)">4</a>
+            <a href="#" class="line_btn" onclick="doValue(5)">5</a>
+            <a href="#" class="line_btn" onclick="doValue(6)">6</a>
+            <a href="#" class="calc_btn" onclick="doCalculate('-')">-</a>
+        </div>
+
+        <!-- 1 2 3 - -->
+        <div id="line">
+            <a href="#" class="line_btn" onclick="doValue(1)">1</a>
+            <a href="#" class="line_btn" onclick="doValue(2)">2</a>
+            <a href="#" class="line_btn" onclick="doValue(3)">3</a>
+            <a href="#" class="calc_btn" onclick="doCalculate('+')">+</a>
+        </div>
+
+        <!-- 0 . = -->
+        <div id="line">
+            <a href="#" class="line_btn" id="non_num_btn" onclick="doValue(0)">0</a>
+            <a href="#" class="line_btn" onclick="doDecimalPoint('.')">.</a>
+            <a href="#" class="calc_btn" id="equal_btn" onclick="doCalculate('=')">=</a>
+        </div>        
+    </div>
+    </form>
+  </body>
+</html>
